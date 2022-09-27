@@ -16,7 +16,7 @@ app.get('/', (req, resp) => {
 });
 
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 console.log("My App Running on", port);
 app.listen(3000, () => {
     console.log("Starting my app");
