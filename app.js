@@ -7,7 +7,7 @@ app.get('/', (req, resp) => {
 });
 
 const port = process.env.port || 3000;
-console.log("My App Ruu=nning on", port);
+console.log("My App Running on", port);
 app.listen(port, () => {
     console.log("Starting my app");
 });
