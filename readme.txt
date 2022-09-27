@@ -6,6 +6,7 @@
 5) create app.js
 
 
+
 const express = require('express');
 const app = express();
 
@@ -15,13 +16,15 @@ app.get('/', (req, resp) => {
 });
 
 
-console.log("running2xx");
+const port = process.env.port || 3000;
+console.log("My App Running on", port);
 app.listen(3000, () => {
     console.log("Starting my app");
 });
 
 
-
+5b) add to package.json
+"start":"node app.js",
 6) nodemon app.js
 7) go to aws ELB - create application
 8) also codepipeline - name, source provider, put project repo - 
@@ -44,3 +47,6 @@ git remote set-url origin git@github.com:goldel777/nodeFun.git
 
 10) npx gitignore node
 
+
+11) create application and env in ElasticBeanStalk - configure the port in env Configuration/Software/properties
+12) create codepipeline - github 1 - skip build, add elb application as deployment, see if deploye

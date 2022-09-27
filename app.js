@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+//app.use('/node_modules', express.static(__dirname + '/node_modules/moment/moment.js'));
 console.log("running");
 app.get('/', (req, resp) => {
    resp.send("Welcome HOME!");
