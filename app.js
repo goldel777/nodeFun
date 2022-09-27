@@ -6,9 +6,9 @@ app.get('/', (req, resp) => {
    resp.send("Welcome HOME!");
 });
 
-
-console.log("running2xx");
-app.listen(3000, () => {
+const port = process.env.port || 3000;
+console.log("My App Ruu=nning on", port);
+app.listen(port, () => {
     console.log("Starting my app");
 });
 
